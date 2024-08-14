@@ -105,3 +105,15 @@ ul {
     --pg-lg: 2rem;
   }
 }
+
+li {
+  display: inline;
+  padding: 4rem;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+header {
+  width: fit-content;
+  height: fit-content;
+}
