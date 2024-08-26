@@ -1,4 +1,6 @@
-*::before *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -11,12 +13,13 @@
 }
 
 :root {
-  --text-color: #252b42;
+  --bg-color: #FFF;
+  --text-color: #252B42;
   --second-text-color: #737373;
-  --light-text-color: #fff;
-  --light-gray: #f8f8f8;
-  --primary-color: #23a6f0;
-  --secondary-color: #b2e3ff;
+  --light-text-color: #FFF;
+  --light-gray: #F8F8F8;
+  --primary-color: #23A6F0;
+  --secondary-color: #B2E3FF;
 
   --ff-sans: "Montserrat", system-ui, sans-serif;
   --fw-base: 400;
@@ -33,7 +36,7 @@
   --py-base: 1rem;
   --py-lg: 1.5rem;
   --py-xl: 3rem;
-  --py-lg: 1.5rem;
+  --px-lg: 1.5rem;
 }
 
 html {
@@ -42,7 +45,7 @@ html {
   font-size: var(--fs-base);
   line-height: 1.6;
   color: var(--text-color);
-  overflow: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -59,6 +62,7 @@ h3 {
   font-weight: var(--fw-bold);
   letter-spacing: -0.04em;
 }
+
 
 h1 {
   font-size: var(--fs-2xl);
@@ -92,7 +96,7 @@ ul {
   list-style: none;
 }
 
-@media(width>=1280px) {
+@media (width >=1280px) {
   :root {
     --fs-lg: 2rem;
     --fs-xl: 2.625rem;
@@ -101,21 +105,7 @@ ul {
     --py-sm: 1rem;
     --py-base: 1.5rem;
     --py-lg: 2.5rem;
-    --py-xl: 4rem;
+    --py-xl: 5rem;
     --pg-lg: 2rem;
   }
 }
-
-/* 
-header {
-  width: max-content;
-  height: fit-content;
-}
-
-body {
-  display: flex;
-  padding: 0rem 12rem;
-  flex-direction: column;
-  height: 100vh;
-  width: 100%;
-} */
