@@ -4,6 +4,9 @@ import Logo from "../assets/Trellenilton logo.svg";
 import menu from "../assets/menu.svg"
 import close from "../assets/close.svg"
 import Button from "../components/Button";
+import HeroRectangleOne from "../assets/images/RectangleOne.png";
+import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
+import "../styles/hero.css"
 import { useState } from "react";
 
 export default function Home() {
@@ -49,6 +52,9 @@ export default function Home() {
                                         <li>
                                             <a href="#contact">Contato</a>
                                         </li>
+                                        <li>
+                                            <a className="reverse-color" href="#">Login</a>
+                                        </li>
                                     </ul>
                                     <span onClick={() => setShowMobileMenu(!showMobileMenu)} className="btn-wrapper">
                                         <img src={close} alt="ícone fechar menu" width={24} height={24} />
@@ -64,6 +70,30 @@ export default function Home() {
 
                 </nav>
             </header>
+
+            <section id="hero">
+                <span className="desktop-only">
+                    <img src={HeroRectangleOne} alt="Retangulo 1 tela incial " />
+                </span>
+                <img src={HeroRectangleTwo} alt="Retangulo 2 tela incial" />
+                <div className="container content">
+                    <p className="desktop-only">
+                        Olá
+                    </p>
+                    <h1>Organize suas tarefas</h1>
+                    <p>
+                        O Trellenilton chegou para que você possa organizar suas tarefas do melhor jeito possível.
+                    </p>
+                    <div className="flex gap-1">
+                        <span>
+                            <Button text="Cadastre-se"></Button>
+                        </span>
+                        <span className="desktop-only">
+                            <Button text="Veja mais" secondary></Button>
+                        </span>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
