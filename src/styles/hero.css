@@ -35,17 +35,17 @@
     #hero {
         background: var(--bg-color);
         border-top: none;
-    }
 
-    #hero>span {
-        position: absolute;
-        top: 0;
-    }
+        >span {
+            position: absolute;
+            top: 0;
+        }
 
-    #hero>img {
-        top: 0;
-        height: 82%;
-        padding-left: 55%;
+        >img {
+            top: 0;
+            height: 82%;
+            padding-left: 55%;
+        }
     }
 }
 
@@ -62,7 +62,7 @@
     width: 10.625rem;
 }
 
-.content p{
+.content p {
     width: 80%;
     align-self: center;
 }
