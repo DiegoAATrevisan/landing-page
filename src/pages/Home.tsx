@@ -99,15 +99,15 @@ export default function Home() {
             </section>
 
             <section id="solution">
-                <div className="desktop-only">
+                <div className="desktop-only" id="solution-container">
                     <p className="desktop-only">Soluções</p>
                     <h1>Sob medida para você</h1>
                     <p>Inovação é com a gente! O Trellenilton já conquistou
                         diversos cliente, seja você mais um deles, veja tudo que pode
                         ganhar com nossos serviços.
                     </p>
+                    <p>Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage</p>
                     <div className="cards-container">
-                        Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage
                         <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
                         <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
                         <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>

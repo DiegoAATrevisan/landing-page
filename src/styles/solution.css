@@ -1,43 +1,12 @@
-#solution {
+#solution{
     text-align: center;
 }
 
 .cards-container {
     display: flex;
     justify-content: center;
+    /* Centers the cards horizontally */
+    padding: 0;
     gap: 20px;
-}
-
-#card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    width: 250px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #eee;
-}
-
-.icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-    color: #007bff;
-}
-
-.card strong {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #333;
-}
-
-.card p {
-    font-size: 0.95em;
-    color: #666;
-    line-height: 1.5;
-}
-
-.card:last-child {
-    margin-bottom: 20px;
+    /* Adjust the spacing here as needed */
 }

@@ -1,3 +1,4 @@
+import "../styles/cards.css"
 
 interface ICardProps {
     text: string;
@@ -9,7 +10,7 @@ export default function Card({ imgSrc, text, title }: ICardProps) {
     return (
         <div className="card">
             {imgSrc && <img src={imgSrc} alt="Card Image" />}
-            <strong>{title}</strong>
+            <h2>{title}</h2>
             <p>{text}</p>
         </div>
     )
