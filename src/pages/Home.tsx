@@ -10,6 +10,7 @@ import HeroRectangleOne from "../assets/images/RectangleOne.png";
 import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
 import iconePremio from "../assets/images/icone premio.png";
 import { useState } from "react";
+import Card from "../components/Card";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -105,24 +106,10 @@ export default function Home() {
                         diversos cliente, seja você mais um deles, veja tudo que pode
                         ganhar com nossos serviços.
                     </p>
-                    <div className="flex gap-1 cards-container">
-                        <div className="card">
-                            <img src={iconePremio} />
-                            <strong>Produto vencedor</strong>
-                            <p>Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage.</p>
-                        </div>
-                        <div className="card">
-                            <img src={iconePremio} />
+                    <div className="cards-container">
+                        Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage
+                        <Card imgSrc={iconePremio} title="Vencedor" text=""></Card>
 
-                            <strong>Produto vencedor</strong>
-                            <p>Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage.</p>
-                        </div>
-                        <div className="card">
-                            <img src={iconePremio} />
-
-                            <strong>Produto vencedor</strong>
-                            <p>Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage.</p>
-                        </div>
                     </div>
                 </div>
             </section>
