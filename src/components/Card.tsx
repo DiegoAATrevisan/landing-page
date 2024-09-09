@@ -8,7 +8,7 @@ interface ICardProps {
 export default function Card({ imgSrc, text, title }: ICardProps) {
     return (
         <div className="card">
-            {imgSrc && <img src={imgSrc} alt={title || "Card Image"} />}
+            {imgSrc && <img src={imgSrc} alt="Card Image" />}
             <strong>{title}</strong>
             <p>{text}</p>
         </div>

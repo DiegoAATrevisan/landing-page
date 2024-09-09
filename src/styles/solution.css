@@ -6,27 +6,22 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    /* Espaçamento entre os cards */
 }
 
-.card {
+#card {
     background-color: #f9f9f9;
     padding: 20px;
     width: 250px;
-    /* Ajusta o tamanho dos cards */
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    /* Adiciona uma leve sombra */
     border: 1px solid #eee;
-    /* Adiciona uma borda sutil */
 }
 
 .icon {
     font-size: 40px;
     margin-bottom: 15px;
     color: #007bff;
-    /* Cor azul para o ícone, semelhante ao exemplo */
 }
 
 .card strong {
@@ -41,10 +36,8 @@
     font-size: 0.95em;
     color: #666;
     line-height: 1.5;
-    /* Melhora a legibilidade do texto */
 }
 
-/* Adicionando um pequeno espaçamento na parte inferior do card */
 .card:last-child {
     margin-bottom: 20px;
 }

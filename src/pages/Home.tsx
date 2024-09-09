@@ -108,8 +108,9 @@ export default function Home() {
                     </p>
                     <div className="cards-container">
                         Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage
-                        <Card imgSrc={iconePremio} title="Vencedor" text=""></Card>
-
+                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
+                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
+                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
                     </div>
                 </div>
             </section>
