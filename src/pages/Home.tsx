@@ -1,12 +1,12 @@
 import "../styles/utility.css";
 import "../styles/header.css";
+import "../styles/hero.css"
 import Logo from "../assets/Trellenilton logo.svg";
 import menu from "../assets/menu.svg"
 import close from "../assets/close.svg"
 import Button from "../components/Button";
 import HeroRectangleOne from "../assets/images/RectangleOne.png";
 import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
-import "../styles/hero.css"
 import { useState } from "react";
 
 export default function Home() {
