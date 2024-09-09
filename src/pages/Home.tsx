@@ -96,7 +96,17 @@ export default function Home() {
             </section>
 
             <section id="solution">
-                
+                <div className="desktop-only">
+                    <p className="desktop-only">Soluções</p>
+                    <h1>Sob medida para você</h1>
+                    <p>Inovação é com a gente! O Trellenilton já conquistou
+                        diversos cliente, seja você mais um deles, veja tudo que pode
+                        ganhar com nossos serviços.
+                    </p>
+                    <div className="flex gap-1">
+                        
+                    </div>
+                </div>
             </section>
         </>
     )
