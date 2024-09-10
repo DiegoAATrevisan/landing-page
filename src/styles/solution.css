@@ -10,3 +10,18 @@
     gap: 20px;
     /* Adjust the spacing here as needed */
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    #solution {
+        min-height: 100vh;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

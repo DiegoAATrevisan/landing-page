@@ -14,6 +14,11 @@ import Card from "../components/Card";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    const handleMobileMenuClick = () => {
+        setShowMobileMenu(false);
+    };
+
     return (
         <>
             <header className="container py-sm">
@@ -41,22 +46,22 @@ export default function Home() {
                                 <div className="container flex">
                                     <ul>
                                         <li>
-                                            <a href="#">Home</a>
+                                            <a href="#" onClick={handleMobileMenuClick}>Home</a>
                                         </li>
                                         <li>
-                                            <a href="#solution">Soluções</a>
+                                            <a href="#solution" onClick={handleMobileMenuClick}>Soluções</a>
                                         </li>
                                         <li>
-                                            <a href="#testimonials">Depoimentos</a>
+                                            <a href="#testimonials" onClick={handleMobileMenuClick}>Depoimentos</a>
                                         </li>
                                         <li>
-                                            <a href="#pricing">Preços</a>
+                                            <a href="#pricing" onClick={handleMobileMenuClick}>Preços</a>
                                         </li>
                                         <li>
-                                            <a href="#contact">Contato</a>
+                                            <a href="#contact" onClick={handleMobileMenuClick}>Contato</a>
                                         </li>
                                         <li>
-                                            <a className="reverse-color" href="#">Login</a>
+                                            <a className="reverse-color" href="#" onClick={handleMobileMenuClick}>Login</a>
                                         </li>
                                     </ul>
                                     <span onClick={() => setShowMobileMenu(!showMobileMenu)} className="btn-wrapper">
@@ -111,6 +116,16 @@ export default function Home() {
                         <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
                         <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
                         <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
+                    </div>
+                </div>
+                <div className="mobile-only" id="solution-container">
+                    <h2>Soluções</h2>
+                    <h1>Sob medida para você</h1>
+                    <p>Inovação é com a gente! O Trellenilton já conquistou diversos clientes, seja você mais um deles, veja tudo que pode ganhar com nossos serviços.</p>
+                    <div className="cards-container">
+                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de vários prêmios." />
+                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de vários prêmios." />
+                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de vários prêmios." />
                     </div>
                 </div>
             </section>
