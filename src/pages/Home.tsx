@@ -118,7 +118,7 @@ export default function Home() {
                         <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
                     </div>
                 </div>
-                <div className="mobile-only" id="solution-container">
+                <div className="mobile-menu" id="solution-container">
                     <h2>Soluções</h2>
                     <h1>Sob medida para você</h1>
                     <p>Inovação é com a gente! O Trellenilton já conquistou diversos clientes, seja você mais um deles, veja tudo que pode ganhar com nossos serviços.</p>
