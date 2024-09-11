@@ -3,12 +3,13 @@ import "../styles/header.css";
 import "../styles/hero.css";
 import "../styles/solution.css";
 import Logo from "../assets/Trellenilton logo.svg";
-import menu from "../assets/menu.svg"
-import close from "../assets/close.svg"
+import menu from "../assets/menu.svg";
+import close from "../assets/close.svg";
 import Button from "../components/Button";
 import HeroRectangleOne from "../assets/images/RectangleOne.png";
 import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
-import iconePremio from "../assets/images/icone premio.png";
+import silverMedal from "../assets/silver medal.svg";
+import goldMedal from "../assets/gold medal.svg";
 import { useState } from "react";
 import Card from "../components/Card";
 
@@ -111,11 +112,10 @@ export default function Home() {
                         diversos cliente, seja você mais um deles, veja tudo que pode
                         ganhar com nossos serviços.
                     </p>
-                    <p>Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto, entre eles podemos citar o CityFarm da FAG e Startup Garage</p>
                     <div className="cards-container">
-                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
-                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
-                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de varios prêmios."></Card>
+                        <Card imgSrc={silverMedal} title="2º Lugar" text="CityFarm da FAG"></Card>
+                        <Card imgSrc={goldMedal} title="1º Lugar" text="Startup Garage"></Card>
+                        <Card imgSrc={silverMedal} title="2º Lugar" text="Hackathon 2022"></Card>
                     </div>
                 </div>
                 <div className="mobile-menu" id="solution-container">
@@ -123,9 +123,9 @@ export default function Home() {
                     <h1>Sob medida para você</h1>
                     <p>Inovação é com a gente! O Trellenilton já conquistou diversos clientes, seja você mais um deles, veja tudo que pode ganhar com nossos serviços.</p>
                     <div className="cards-container">
-                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de vários prêmios." />
-                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de vários prêmios." />
-                        <Card imgSrc={iconePremio} title="Vencedor" text="Vencedor de vários prêmios." />
+                        <Card imgSrc={silverMedal} title="2º Lugar" text="CityFarm da FAG" />
+                        <Card imgSrc={goldMedal} title="1º Lugar" text="Startup Garage" />
+                        <Card imgSrc={silverMedal} title="2º Lugar" text="Hackathon 2022" />
                     </div>
                 </div>
             </section>
