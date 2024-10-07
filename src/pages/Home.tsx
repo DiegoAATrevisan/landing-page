@@ -12,6 +12,12 @@ import silverMedal from "../assets/silver medal.svg";
 import goldMedal from "../assets/gold medal.svg";
 import { useState } from "react";
 import Card from "../components/Card";
+import Elon from "../assets/images/elon.svg"
+import Ryan from "../assets/images/ryan.svg"
+import Estrela1 from "../assets/images/estrela1.svg"
+import Estrela2 from "../assets/images/estrela2.svg"
+import "../styles/testimonials.css";
+
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -126,6 +132,42 @@ export default function Home() {
                         <Card imgSrc={silverMedal} title="2º Lugar" text="CityFarm da FAG" />
                         <Card imgSrc={goldMedal} title="1º Lugar" text="Startup Garage" />
                         <Card imgSrc={silverMedal} title="2º Lugar" text="Hackathon 2022" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials">
+                <header>
+                    <span>
+                        <p className="desktop-only">Conselho de quem conhece</p>
+                        <h2>Cada cliente importa!</h2>
+                    </span>
+                    <p>
+                        Quem já pediu sabe da qualidade das nossas receitas, estamos tirando aquela ideia de que
+                        comida congelada tem de ser algo sem gosto, acompanhe abaixo os testemunhos de quem já comprou e aprovou.
+                    </p>
+                </header>
+                <div className="carousel">
+                    <div className="carousel-content">
+                        <div className="carousel-card">
+                            <img src={Elon} alt="Elon Musk" />
+                            <span>
+                                <p>
+                                    "O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!"
+                                </p>
+                            </span>
+                            <span className="rating">
+                                <img src={Estrela1} alt="estrela" width={22} height={20} />
+                                <img src={Estrela1} alt="estrela" width={22} height={20} />
+                                <img src={Estrela1} alt="estrela" width={22} height={20} />
+                                <img src={Estrela1} alt="estrela" width={22} height={20} />
+                                <img src={Estrela2} alt="estrela vazia" width={22} height={22} />
+                            </span>
+                            <span className="names">
+                                <p className="bold">Elson Mask</p>
+                                <p>CEO BING CHILLING</p>
+                            </span>
+                        </div>
                     </div>
                 </div>
             </section>
