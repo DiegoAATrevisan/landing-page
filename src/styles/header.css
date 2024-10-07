@@ -40,20 +40,20 @@
 }
 
 @media (width >=1280px) {
-    header {
+    & header {
         position: relative;
         z-index: 1;
     }
 
-    nav>img {
+    & nav>img {
         display: initial;
     }
 
-    .mobile-menu {
+    & .mobile-menu {
         display: none;
     }
 
-    .mobile-menu-content {
+    & .mobile-menu-content {
         display: none;
     }
 }

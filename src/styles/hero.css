@@ -32,16 +32,16 @@
 }
 
 @media (width>=1290px) {
-    #hero {
+    & #hero {
         background: var(--bg-color);
         border-top: none;
 
-        >span {
+        &>span {
             position: absolute;
             top: 0;
         }
 
-        >img {
+        &>img {
             top: 0;
             height: 82%;
             padding-left: 55%;

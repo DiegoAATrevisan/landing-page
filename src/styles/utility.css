@@ -59,15 +59,15 @@
 }
 
 @media (width >=1280px) {
-    .container {
+    & .container {
         --max-width: 1050px;
     }
 
-    .desktop-only {
+    & .desktop-only {
         display: initial;
     }
 
-    .even-columns {
+    & .even-columns {
         grid-auto-flow: column;
         grid-auto-columns: 1fr;
     }
