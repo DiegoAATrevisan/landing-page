@@ -6,7 +6,7 @@ interface ICardProps {
     imgSrc?: string;
 }
 
-export default function Card({ imgSrc, text, title }: ICardProps) {
+export default function CardSolution({ imgSrc, text, title }: ICardProps) {
     return (
         <div className="card">
             {imgSrc && <img src={imgSrc} alt="Card Image" />}
