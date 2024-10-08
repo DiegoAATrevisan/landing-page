@@ -11,13 +11,12 @@ import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
 import silverMedal from "../assets/silver medal.svg";
 import goldMedal from "../assets/gold medal.svg";
 import { useState } from "react";
-import Card from "../components/CardSolution";
-import Elon from "../assets/images/elon.svg"
-import Ryan from "../assets/images/ryan.svg"
-import Estrela1 from "../assets/images/estrela1.svg"
-import Estrela2 from "../assets/images/estrela2.svg"
+import Elon from "../assets/images/elon.svg";
+import Ryan from "../assets/images/ryan.svg";
+import Joaquin from "../assets/images/joaquin.svg";
 import "../styles/testimonials.css";
 import CardSolution from "../components/CardSolution";
+import CardTestimonials from "../components/CardTestimonials";
 
 
 export default function Home() {
@@ -150,25 +149,12 @@ export default function Home() {
                 </header>
                 <div className="carousel">
                     <div className="carousel-content">
-                        <div className="carousel-card">
-                            <img src={Elon} alt="Elon Musk" />
-                            <span>
-                                <p>
-                                    "O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!"
-                                </p>
-                            </span>
-                            <span className="rating">
-                                <img src={Estrela1} alt="estrela" width={22} height={20} />
-                                <img src={Estrela1} alt="estrela" width={22} height={20} />
-                                <img src={Estrela1} alt="estrela" width={22} height={20} />
-                                <img src={Estrela1} alt="estrela" width={22} height={20} />
-                                <img src={Estrela2} alt="estrela vazia" width={22} height={22} />
-                            </span>
-                            <span className="names">
-                                <p className="bold">Elson Mask</p>
-                                <p>CEO BING CHILLING</p>
-                            </span>
-                        </div>
+                        <CardTestimonials imgProfile={Elon} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Elon Musk" profession="CEO da SpaceX" filledStars={5} />
+                        <CardTestimonials imgProfile={Ryan} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Ryan Gosling" profession="Ator de sucesso" filledStars={2} />
+                        <CardTestimonials imgProfile={Joaquin} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Joaquin Phoenix" profession="Ator de sucesso" filledStars={3} />
+                        <CardTestimonials imgProfile={Elon} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Elon Musk" profession="CEO da SpaceX" filledStars={5} />
+                        <CardTestimonials imgProfile={Ryan} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Ryan Gosling" profession="Ator de sucesso" filledStars={2} />
+                        <CardTestimonials imgProfile={Joaquin} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Joaquin Phoenix" profession="Ator de sucesso" filledStars={3} />
                     </div>
                 </div>
             </section>
