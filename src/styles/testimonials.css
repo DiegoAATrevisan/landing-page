@@ -7,7 +7,7 @@
     gap: 2rem;
 }
 
-header {
+.header-testimonials {
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -16,7 +16,7 @@ header {
     align-items: center;
 }
 
-header :first-child {
+.header-testimonials :first-child {
     color: var(--primary-color);
     font-weight: var(--fw-bold);
 }

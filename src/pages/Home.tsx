@@ -11,12 +11,13 @@ import HeroRectangleTwo from "../assets/images/RectangleTwo.png";
 import silverMedal from "../assets/silver medal.svg";
 import goldMedal from "../assets/gold medal.svg";
 import { useState } from "react";
-import Card from "../components/Card";
+import Card from "../components/CardSolution";
 import Elon from "../assets/images/elon.svg"
 import Ryan from "../assets/images/ryan.svg"
 import Estrela1 from "../assets/images/estrela1.svg"
 import Estrela2 from "../assets/images/estrela2.svg"
 import "../styles/testimonials.css";
+import CardSolution from "../components/CardSolution";
 
 
 export default function Home() {
@@ -119,9 +120,9 @@ export default function Home() {
                         ganhar com nossos serviços.
                     </p>
                     <div className="cards-container">
-                        <Card imgSrc={silverMedal} title="2º Lugar" text="CityFarm da FAG"></Card>
-                        <Card imgSrc={goldMedal} title="1º Lugar" text="Startup Garage"></Card>
-                        <Card imgSrc={silverMedal} title="2º Lugar" text="Hackathon 2022"></Card>
+                        <CardSolution imgSrc={silverMedal} title="2º Lugar" text="CityFarm da FAG" />
+                        <CardSolution imgSrc={goldMedal} title="1º Lugar" text="Startup Garage" />
+                        <CardSolution imgSrc={silverMedal} title="2º Lugar" text="Hackathon 2022" />
                     </div>
                 </div>
                 <div className="mobile-menu" id="solution-container">
@@ -129,15 +130,15 @@ export default function Home() {
                     <h1>Sob medida para você</h1>
                     <p>Inovação é com a gente! O Trellenilton já conquistou diversos clientes, seja você mais um deles, veja tudo que pode ganhar com nossos serviços.</p>
                     <div className="cards-container">
-                        <Card imgSrc={silverMedal} title="2º Lugar" text="CityFarm da FAG" />
-                        <Card imgSrc={goldMedal} title="1º Lugar" text="Startup Garage" />
-                        <Card imgSrc={silverMedal} title="2º Lugar" text="Hackathon 2022" />
+                        <CardSolution imgSrc={silverMedal} title="2º Lugar" text="CityFarm da FAG" />
+                        <CardSolution imgSrc={goldMedal} title="1º Lugar" text="Startup Garage" />
+                        <CardSolution imgSrc={silverMedal} title="2º Lugar" text="Hackathon 2022" />
                     </div>
                 </div>
             </section>
 
             <section id="testimonials">
-                <header>
+                <header className="header-testimonials">
                     <span>
                         <p className="desktop-only">Conselho de quem conhece</p>
                         <h2>Cada cliente importa!</h2>
