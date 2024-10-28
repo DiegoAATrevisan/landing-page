@@ -24,7 +24,8 @@
 p {
     color: var(--second-text-color);
 }
-    .carousel {
+
+.carousel {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -39,10 +40,11 @@ p {
 
 @keyframes carousel {
     0% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     100% {
-      transform: translateX(-50%);
+        transform: translateX(-50%);
     }
 }
 
@@ -50,9 +52,10 @@ p {
 .carousel-content:hover {
     animation-play-state: paused;
 }
+
 @media (width >=580px) {
-      #testimonials {
-          gap: 5rem;
+    #testimonials {
+        gap: 5rem;
         align-items: center;
 
         & header p {
