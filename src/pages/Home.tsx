@@ -152,6 +152,7 @@ export default function Home() {
                         <CardTestimonials imgProfile={Elon} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Elon Musk" profession="CEO da SpaceX" filledStars={5} />
                         <CardTestimonials imgProfile={Ryan} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Ryan Gosling" profession="Ator de sucesso" filledStars={2} />
                         <CardTestimonials imgProfile={Joaquin} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Joaquin Phoenix" profession="Ator de sucesso" filledStars={3} />
+
                         <CardTestimonials imgProfile={Elon} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Elon Musk" profession="CEO da SpaceX" filledStars={5} />
                         <CardTestimonials imgProfile={Ryan} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Ryan Gosling" profession="Ator de sucesso" filledStars={2} />
                         <CardTestimonials imgProfile={Joaquin} depoyment="O Trellenilton foi excelente para minha família. Fizemos a comida congelada e todos estavam bem contentes!" name="Joaquin Phoenix" profession="Ator de sucesso" filledStars={3} />

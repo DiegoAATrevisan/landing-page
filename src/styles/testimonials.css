@@ -24,40 +24,35 @@
 p {
     color: var(--second-text-color);
 }
-
-.carousel {
-    display: flex;
-    width: 80%;
-}
-
-.carousel:hover {
-    .carousel-content {
-        animation-play-state: paused;
-        cursor: pointer;
-    }
+    .carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .carousel-content {
     display: flex;
-    gap: 1.5rem;
-    padding-right: 1.5rem;
-    animation: swipe 30000ms linear infinite;
+    gap: 2rem;
+    animation: carousel 25s linear infinite;
+    width: fit-content;
 }
 
-
-@keyframes swipe {
+@keyframes carousel {
     0% {
-        transform: translateX(0);
+      transform: translateX(0);
     }
-
     100% {
-        transform: translateX(-100%);
+      transform: translateX(-50%);
     }
 }
 
+/* Pause animation on hover */
+.carousel-content:hover {
+    animation-play-state: paused;
+}
 @media (width >=580px) {
-    #testimonials {
-        gap: 5rem;
+      #testimonials {
+          gap: 5rem;
         align-items: center;
 
         & header p {
