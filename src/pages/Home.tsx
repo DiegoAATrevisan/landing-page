@@ -3,6 +3,7 @@ import "../styles/header.css";
 import "../styles/hero.css";
 import "../styles/pricing.css";
 import "../styles/solution.css";
+import "../styles/contact.css";
 import Logo from "../assets/Trellenilton logo.svg";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
@@ -21,12 +22,28 @@ import CardTestimonials from "../components/CardTestimonials";
 import Check from "../assets/images/check.svg";
 
 
+
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const [email, setEmail] = useState("");
 
     const handleMobileMenuClick = () => {
         setShowMobileMenu(false);
     };
+
+    function disparaEmail() {
+        fetch('https://us-central1-peerless-rite-440004-h8.cloudfunctions.net/disparo-email-2', {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer '.concat("eyJhbGciOiJSUzI1NiIsImtpZCI6ImU4NjNmZTI5MmZhMmEyOTY3Y2Q3NTUxYzQyYTEyMTFiY2FjNTUwNzEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTExNTA4NTg0NjIzMzUzNDg2MjY4IiwiaGQiOiJtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWwiOiJkYWF0cmV2aXNhbkBtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJmT1B2Xzh1WVFtR0M0clVpbm1HRHd3IiwibmJmIjoxNzMwNzY4OTQ3LCJpYXQiOjE3MzA3NjkyNDcsImV4cCI6MTczMDc3Mjg0NywianRpIjoiZjEzMTg5ZTE5YTEwM2UyNmMzM2E1MjZlZjI2NTgyYjI3NjhhOGVmZCJ9.Cx-iSrQecIoGWQE-C24wsx2SKWUH7R74p_SQkVgRiqMzT7f0N-jDoO1qjcGCt-O_5GaeJKKGPlPy5m5XHa8gp4svoqlzeGTDeczBIkoTTiH4_uDMkmY9Nv8diIGEVEfJfEeiSKkqamBAIcEs2AaQ78J1bBJNimVU5ztyHW8-096m65DXk5AigwUaLjX4OLKrf_SwjC56iFGShI7KyJbnS-VyQNpM2B0u49-0GN9iHt_q9fKiO3i7eKlCtwRizhfRBkxxNLoskGgJOxH-bIoVv_Di8FQFzZiEAVNAZdBXObtTf7pc7N2_BJsuduZd9PBuwiWoahv3ZbtSsG8oqSm62w") },
+            body: JSON.stringify({
+                'toMail': email,
+                'content': 'Você aderiu ao nosso sistema de notificações!',
+            }),
+        })
+            .then(res => res.json())
+            .then(console.log);
+
+    }
 
     return (
         <>
@@ -214,6 +231,18 @@ export default function Home() {
 
                     </section>
                 </header>
+            </section>
+
+            <section id="contact" className="container">
+                <header>
+                    <p className="desktop-only">Contato</p>
+                    <h2>Entre em contato</h2>
+                    <p>Precisa de ajuda? Entre em contato com a gente.</p>
+                </header>
+                <input type="text" className="email" value={email} onChange={event => setEmail(event.target.value)} placeholder="Digite seu e-mail" />
+                <Button
+                    text="Quero receber novidades!"
+                    onclick={() => disparaEmail()} />
             </section>
         </>
     )
