@@ -17,9 +17,13 @@ import Elon from "../assets/images/elon.svg";
 import Ryan from "../assets/images/ryan.svg";
 import Joaquin from "../assets/images/joaquin.svg";
 import "../styles/testimonials.css";
+import "../styles/footer.css";
 import CardSolution from "../components/CardSolution";
 import CardTestimonials from "../components/CardTestimonials";
 import Check from "../assets/images/check.svg";
+import Instagram from "../assets/images/instagram.svg";
+import Facebook from "../assets/images/facebook.svg";
+import Youtube from "../assets/images/youtube.svg";
 
 
 
@@ -31,19 +35,30 @@ export default function Home() {
         setShowMobileMenu(false);
     };
 
-    function disparaEmail() {
+    function disparaEmail(email: string) {
         fetch('https://us-central1-peerless-rite-440004-h8.cloudfunctions.net/disparo-email-2', {
             method: 'POST',
-            headers: { 'Authorization': 'Bearer '.concat("eyJhbGciOiJSUzI1NiIsImtpZCI6ImU4NjNmZTI5MmZhMmEyOTY3Y2Q3NTUxYzQyYTEyMTFiY2FjNTUwNzEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTExNTA4NTg0NjIzMzUzNDg2MjY4IiwiaGQiOiJtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWwiOiJkYWF0cmV2aXNhbkBtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJmT1B2Xzh1WVFtR0M0clVpbm1HRHd3IiwibmJmIjoxNzMwNzY4OTQ3LCJpYXQiOjE3MzA3NjkyNDcsImV4cCI6MTczMDc3Mjg0NywianRpIjoiZjEzMTg5ZTE5YTEwM2UyNmMzM2E1MjZlZjI2NTgyYjI3NjhhOGVmZCJ9.Cx-iSrQecIoGWQE-C24wsx2SKWUH7R74p_SQkVgRiqMzT7f0N-jDoO1qjcGCt-O_5GaeJKKGPlPy5m5XHa8gp4svoqlzeGTDeczBIkoTTiH4_uDMkmY9Nv8diIGEVEfJfEeiSKkqamBAIcEs2AaQ78J1bBJNimVU5ztyHW8-096m65DXk5AigwUaLjX4OLKrf_SwjC56iFGShI7KyJbnS-VyQNpM2B0u49-0GN9iHt_q9fKiO3i7eKlCtwRizhfRBkxxNLoskGgJOxH-bIoVv_Di8FQFzZiEAVNAZdBXObtTf7pc7N2_BJsuduZd9PBuwiWoahv3ZbtSsG8oqSm62w") },
+            mode:'no-cors',
+            credentials: 'include',
+            headers: {
+                'Authorization': 'Bearer ' + "eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTExNTA4NTg0NjIzMzUzNDg2MjY4IiwiaGQiOiJtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWwiOiJkYWF0cmV2aXNhbkBtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIwZG8zZkhrQW93T1E4SUZoLUlkQzFBIiwibmJmIjoxNzMxMzY3MjUxLCJpYXQiOjE3MzEzNjc1NTEsImV4cCI6MTczMTM3MTE1MSwianRpIjoiYzE5NDgyMzE5NzhjYzg1YWEwYmJhZWMyNTU2MDJmNjExNDVlZWFmZiJ9.tt61k7SKHPqh2eobVFS8NQKu0N0gm2O9xhHe1qBy5KBTLBTaG5VL_sfzkCiAhop5Unv2IcVgB7ElVkiHdl0LcFih2_K-DywE0yjG-vb_jetXk-K4XVECCYvJgG0y1Ixt1YC5PsgWS7bx0UcNeA2uH0CIy2mH3askSzTJJKa46333BuhPONKlvsd8LPf6nVdMY9ffHHeVEdYLeHwten63MFWKcN4bhCqR5EXjzNyPlKMXdpWptFf0-BEJbiUyUWwfvnbG62js55N2nror2AdUwfCWYRG3N5fgMt1BR9wMHFwa30dci17gVjC2WFEdTkl7Wtwt1pgBdVIp-4dVvnANnw",
+
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
                 'toMail': email,
-                'content': 'Você aderiu ao nosso sistema de notificações!',
-            }),
+                'content': 'Você aderiu ao nosso sistema de notificações!'
+            })
         })
-            .then(res => res.json())
-            .then(console.log);
-
+        .then(response => {
+            console.log("Status:", response.status);
+            return response.text();
+        })
+        .then(data => console.log("Resposta:", data))
+        .catch(error => console.error("Erro na requisição:", error));
     }
+
+
 
     return (
         <>
@@ -242,7 +257,55 @@ export default function Home() {
                 <input type="text" className="email" value={email} onChange={event => setEmail(event.target.value)} placeholder="Digite seu e-mail" />
                 <Button
                     text="Quero receber novidades!"
-                    onclick={() => disparaEmail()} />
+                    onclick={() => disparaEmail(email)} />
+            </section>
+
+            <section className="footer">
+                <div className="container">
+                    <div className="footer-content">
+                        <div className="footer-column">
+                            
+                            <img src={Logo} alt="Logo DonaFrost" width={220} height={80} />
+                            <div className="social-icons">
+                                <a href="#" aria-label="Instagram"><img src={Instagram} alt="insta" width={24} height={24} /></a>
+                                <a href="#" aria-label="Facebook"><img src={Facebook} alt="insta" width={24} height={24} /></a>
+                                <a href="#" aria-label="YouTube"><img src={Youtube} alt="insta" width={24} height={24} /></a>
+                            </div>
+                        </div>
+
+                        <div className="footer-column">
+                            <h3>Empresa</h3>
+                            <ul>
+                                <li><a href="#">Sobre nós</a></li>
+                                <li><a href="#">Faça parte do time</a></li>
+                                <li><a href="#">Blog</a></li>
+                            </ul>
+                        </div>
+
+                        <div className="footer-column">
+                            <h3>Funcionalidades</h3>
+                            <ul>
+                                <li><a href="#">Marketing</a></li>
+                                <li><a href="#">Análise de dados</a></li>
+                                <li><a href="#">Boot Discord</a></li>
+                            </ul>
+                        </div>
+
+                        <div className="footer-column">
+                            <h3>Recursos</h3>
+                            <ul>
+                                <li><a href="#">IOS & Android</a></li>
+                                <li><a href="#">Teste a Demo</a></li>
+                                <li><a href="#">Clientes</a></li>
+                                <li><a href="#">API</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="footer-bottom">
+                    <p>Feito com amor na aula de Programação Web💙©2024 AktieTech - Todos os direitos reservados.</p>
+                </div>
             </section>
         </>
     )
