@@ -8,10 +8,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Proxy para o Google Cloud Functions na produção
-[[redirects]]
-  from = "/api/*"
-  to = "https://us-central1-peerless-rite-440004-h8.cloudfunctions.net/disparo-email-2/:splat"
-  status = 200
-  force = true

@@ -34,13 +34,13 @@ export default function Home() {
     const handleMobileMenuClick = () => {
         setShowMobileMenu(false);
     };
-    const token = import.meta.env.VITE_EMAIL_TOKEN;
+    
     function disparaEmail(email: string) {
         fetch('api', {
             method: 'POST',
             credentials: 'include',
             headers: {
-                'Authorization': 'Bearer ' + token,
+                'Authorization': 'Bearer ' + "eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTExNTA4NTg0NjIzMzUzNDg2MjY4IiwiaGQiOiJtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWwiOiJkYWF0cmV2aXNhbkBtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIxQnBXWVo3Z3hleDhSLUFDUXkxSjZRIiwibmJmIjoxNzMxMzg3NTI5LCJpYXQiOjE3MzEzODc4MjksImV4cCI6MTczMTM5MTQyOSwianRpIjoiZTgzOTYxYTNiN2MwOGZmMjA5NzU3ZjQ4NzFhMTBmNmVkZmM1NWRjZCJ9.O0FFyOGky2b8SBKgCD_-mThaBUilELR7XneSTAhvDsF_RehGda1NUncH2tSOirM5_hoK1p65P5fXPw1KFAhYRMpUX3e35I2zIDkpRl_VhbmEJigLP8WgQgMe_gVGdznsNxSY20lbPPg9GqVOTtkSP_yYO0asWUu3gS5mbYO71T9KRqNgBJ063FveUlEf08MFrx10hFPz6RHPqFqd_yErj4tePRjjVTeIuOSA598OYAsTww8BKK9mggo12zBFY1X2lu8nbT-fID-mZssVYpQ0vqBQe6g9hl98wBji6I4NUj-Ro329Sb8mCfxt0Meaw0K8r808CHFsCWLGRuitpxGzmA",
 
                 'Content-Type': 'application/json'
             },
