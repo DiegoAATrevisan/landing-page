@@ -247,7 +247,7 @@ export default function Home() {
                 </header>
             </section>
 
-            <section id="contact" className="container">
+            <section id="contact">
                 <header>
                     <p className="desktop-only">Contato</p>
                     <h2>Entre em contato</h2>

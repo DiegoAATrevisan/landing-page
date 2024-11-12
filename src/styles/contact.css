@@ -4,8 +4,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem
+    gap: 1.5rem;
 }
+
 
 .email {
     width: 400px;
@@ -16,4 +17,11 @@
 
 #contact button {
     width: 400px;
+}
+
+@media(width>=580) {
+    #contact {
+        gap: 5rem;
+        padding-block: 5rem;
+    }
 }
