@@ -34,14 +34,13 @@ export default function Home() {
     const handleMobileMenuClick = () => {
         setShowMobileMenu(false);
     };
-
+    
     function disparaEmail(email: string) {
-        fetch('https://us-central1-peerless-rite-440004-h8.cloudfunctions.net/disparo-email-2', {
+        fetch('api', {
             method: 'POST',
-            mode:'no-cors',
             credentials: 'include',
             headers: {
-                'Authorization': 'Bearer ' + "eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTExNTA4NTg0NjIzMzUzNDg2MjY4IiwiaGQiOiJtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWwiOiJkYWF0cmV2aXNhbkBtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIwZG8zZkhrQW93T1E4SUZoLUlkQzFBIiwibmJmIjoxNzMxMzY3MjUxLCJpYXQiOjE3MzEzNjc1NTEsImV4cCI6MTczMTM3MTE1MSwianRpIjoiYzE5NDgyMzE5NzhjYzg1YWEwYmJhZWMyNTU2MDJmNjExNDVlZWFmZiJ9.tt61k7SKHPqh2eobVFS8NQKu0N0gm2O9xhHe1qBy5KBTLBTaG5VL_sfzkCiAhop5Unv2IcVgB7ElVkiHdl0LcFih2_K-DywE0yjG-vb_jetXk-K4XVECCYvJgG0y1Ixt1YC5PsgWS7bx0UcNeA2uH0CIy2mH3askSzTJJKa46333BuhPONKlvsd8LPf6nVdMY9ffHHeVEdYLeHwten63MFWKcN4bhCqR5EXjzNyPlKMXdpWptFf0-BEJbiUyUWwfvnbG62js55N2nror2AdUwfCWYRG3N5fgMt1BR9wMHFwa30dci17gVjC2WFEdTkl7Wtwt1pgBdVIp-4dVvnANnw",
+                'Authorization': 'Bearer ' + "eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTExNTA4NTg0NjIzMzUzNDg2MjY4IiwiaGQiOiJtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWwiOiJkYWF0cmV2aXNhbkBtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIxQnBXWVo3Z3hleDhSLUFDUXkxSjZRIiwibmJmIjoxNzMxMzg3NTI5LCJpYXQiOjE3MzEzODc4MjksImV4cCI6MTczMTM5MTQyOSwianRpIjoiZTgzOTYxYTNiN2MwOGZmMjA5NzU3ZjQ4NzFhMTBmNmVkZmM1NWRjZCJ9.O0FFyOGky2b8SBKgCD_-mThaBUilELR7XneSTAhvDsF_RehGda1NUncH2tSOirM5_hoK1p65P5fXPw1KFAhYRMpUX3e35I2zIDkpRl_VhbmEJigLP8WgQgMe_gVGdznsNxSY20lbPPg9GqVOTtkSP_yYO0asWUu3gS5mbYO71T9KRqNgBJ063FveUlEf08MFrx10hFPz6RHPqFqd_yErj4tePRjjVTeIuOSA598OYAsTww8BKK9mggo12zBFY1X2lu8nbT-fID-mZssVYpQ0vqBQe6g9hl98wBji6I4NUj-Ro329Sb8mCfxt0Meaw0K8r808CHFsCWLGRuitpxGzmA",
 
                 'Content-Type': 'application/json'
             },
@@ -50,12 +49,12 @@ export default function Home() {
                 'content': 'Você aderiu ao nosso sistema de notificações!'
             })
         })
-        .then(response => {
-            console.log("Status:", response.status);
-            return response.text();
-        })
-        .then(data => console.log("Resposta:", data))
-        .catch(error => console.error("Erro na requisição:", error));
+            .then(response => {
+                console.log("Status:", response.status);
+                return response.text();
+            })
+            .then(data => console.log("Resposta:", data))
+            .catch(error => console.error("Erro na requisição:", error));
     }
 
 
@@ -264,7 +263,7 @@ export default function Home() {
                 <div className="container">
                     <div className="footer-content">
                         <div className="footer-column">
-                            
+
                             <img src={Logo} alt="Logo DonaFrost" width={220} height={80} />
                             <div className="social-icons">
                                 <a href="#" aria-label="Instagram"><img src={Instagram} alt="insta" width={24} height={24} /></a>
