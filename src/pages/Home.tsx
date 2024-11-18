@@ -251,7 +251,7 @@ export default function Home() {
                 <header>
                     <p className="desktop-only">Contato</p>
                     <h2>Entre em contato</h2>
-                    <p>Precisa de ajuda? Entre em contato com a gente.</p>
+                    <p className="desc-contact">Precisa de ajuda? Entre em contato com a gente.</p>
                 </header>
                 <input type="text" className="email" value={email} onChange={event => setEmail(event.target.value)} placeholder="Digite seu e-mail" />
                 <Button
