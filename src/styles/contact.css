@@ -19,6 +19,18 @@
     width: 400px;
 }
 
+@media (max-width: 480px) {
+    .email {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #contact button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
 @media(width>=580) {
     #contact {
         gap: 5rem;
