@@ -11,6 +11,7 @@
 }
 
 .mobile-menu {
+    padding-inline: 1rem;
     display: initial;
     z-index: 3;
 }
@@ -37,10 +38,6 @@
 
 .mobile-menu-content a {
     font-size: var(--fs-lg);
-}
-
-.menu-spacing{
-    margin-left: 1rem;
 }
 
 @media (width >=1280px) {
