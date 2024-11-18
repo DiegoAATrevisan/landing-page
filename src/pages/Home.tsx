@@ -80,7 +80,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="mobile-menu">
+                    <div className="mobile-menu menu-spacing">
                         {showMobileMenu ?
                             <div className="mobile-menu-content">
                                 <div className="container flex">

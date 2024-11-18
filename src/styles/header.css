@@ -39,6 +39,10 @@
     font-size: var(--fs-lg);
 }
 
+.menu-spacing{
+    margin-left: 1rem;
+}
+
 @media (width >=1280px) {
     & header {
         position: relative;
