@@ -15,6 +15,14 @@
     border: 1px solid #ccc;
 }
 
+.content {
+    width: 400px;
+    height: 100px;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
 #contact button {
     width: 400px;
 }

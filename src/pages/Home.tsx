@@ -30,23 +30,24 @@ import Youtube from "../assets/images/youtube.svg";
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
     const [email, setEmail] = useState("");
+    const [content, setContent] = useState("");
 
     const handleMobileMenuClick = () => {
         setShowMobileMenu(false);
     };
     
-    function disparaEmail(email: string) {
+    function disparaEmail(email: string, content: string) {
         fetch('api', {
             method: 'POST',
             credentials: 'include',
             headers: {
-                'Authorization': 'Bearer ' + "eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTExNTA4NTg0NjIzMzUzNDg2MjY4IiwiaGQiOiJtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWwiOiJkYWF0cmV2aXNhbkBtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiIxQnBXWVo3Z3hleDhSLUFDUXkxSjZRIiwibmJmIjoxNzMxMzg3NTI5LCJpYXQiOjE3MzEzODc4MjksImV4cCI6MTczMTM5MTQyOSwianRpIjoiZTgzOTYxYTNiN2MwOGZmMjA5NzU3ZjQ4NzFhMTBmNmVkZmM1NWRjZCJ9.O0FFyOGky2b8SBKgCD_-mThaBUilELR7XneSTAhvDsF_RehGda1NUncH2tSOirM5_hoK1p65P5fXPw1KFAhYRMpUX3e35I2zIDkpRl_VhbmEJigLP8WgQgMe_gVGdznsNxSY20lbPPg9GqVOTtkSP_yYO0asWUu3gS5mbYO71T9KRqNgBJ063FveUlEf08MFrx10hFPz6RHPqFqd_yErj4tePRjjVTeIuOSA598OYAsTww8BKK9mggo12zBFY1X2lu8nbT-fID-mZssVYpQ0vqBQe6g9hl98wBji6I4NUj-Ro329Sb8mCfxt0Meaw0K8r808CHFsCWLGRuitpxGzmA",
+                'Authorization': 'Bearer ' + "eyJhbGciOiJSUzI1NiIsImtpZCI6ImQ5NzQwYTcwYjA5NzJkY2NmNzVmYTg4YmM1MjliZDE2YTMwNTczYmQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNjE4MTA0NzA4MDU0LTlyOXMxYzRhbGczNmVybGl1Y2hvOXQ1Mm4zMm42ZGdxLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTExNTA4NTg0NjIzMzUzNDg2MjY4IiwiaGQiOiJtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWwiOiJkYWF0cmV2aXNhbkBtaW5oYS5mYWcuZWR1LmJyIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF0X2hhc2giOiJLZ24xenZjbU1ac0o5QTRtZDFxaG9RIiwibmJmIjoxNzMxOTY5NDQ5LCJpYXQiOjE3MzE5Njk3NDksImV4cCI6MTczMTk3MzM0OSwianRpIjoiZTExZGI0NGRjNzA3MGM4ODEyZTY3OGEyYzM3MjgyZjJiNGQ1ODdmNSJ9.Gc7BqesSDO8Q_ue_W-DL8SUVw-_3zOiVr4SAoLc-0uoDaJA00ykwVuSvd2TwRAAUilRF5jOpIG5pI1dMC3LKI_aEwTbgJSkdpjNkyGN_Br85uf_yoOx6DEnFqIOWY66c29hm3Sqj8mwVjOlSg7waUTtEjEJYGOWjKKjXmcjoqMha5Ptzq472_XCboVcDU9zmd6bjhiDWKz3fesnNaH8hugEvilMrIoxXhoA_HorJAzmWwFL7BBciLe7NRNPxLiKIHp3SbXu4bg7PFr4805ZPS5aMiTMje-sM4gzIYaUYIAt7SMto-yqlg_NATt7e71GqWVuE6chuZGp8E1Arb_z2RA",
 
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 'toMail': email,
-                'content': 'Você aderiu ao nosso sistema de notificações!'
+                'content': content
             })
         })
             .then(response => {
@@ -254,9 +255,10 @@ export default function Home() {
                     <p className="desc-contact">Precisa de ajuda? Entre em contato com a gente.</p>
                 </header>
                 <input type="text" className="email" value={email} onChange={event => setEmail(event.target.value)} placeholder="Digite seu e-mail" />
+                <textarea className="content" value={content} onChange={event => setContent(event.target.value)} placeholder="Qual foi o motivo do seu contato?" />
                 <Button
                     text="Quero receber novidades!"
-                    onclick={() => disparaEmail(email)} />
+                    onclick={() => disparaEmail(email, content)} />
             </section>
 
             <section className="footer">
