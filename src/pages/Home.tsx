@@ -64,7 +64,7 @@ export default function Home() {
         <>
             <header className="container py-sm">
                 <nav className="flex items-center justify-between">
-                    <img src={Logo} alt="Logo Trellenilton" width={220} height={80} />
+                    <img src={Logo} className="Logo" alt="Logo Trellenilton" width={220} height={80}/>
                     <div className="desktop-only">
                         <ul className="flex gap-1">
                             <li><a href="#home">Home</a></li>

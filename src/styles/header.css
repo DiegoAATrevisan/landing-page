@@ -40,6 +40,10 @@
     font-size: var(--fs-lg);
 }
 
+.Logo {
+    margin-right: 8rem;
+}
+
 @media (width >=1280px) {
     & header {
         position: relative;
